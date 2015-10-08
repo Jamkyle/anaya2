@@ -113,10 +113,12 @@ body {
 
 #logo {
   margin: auto;
-  -webkit-transform: matrix(1.108, 0, 0, 1.1, 68, 62);
-  transform: matrix(1.108, 0, 0, 1.1, 68, 62); }
+  width: 84%;
+  height: auto;
+  transform: translate(9%, 6%) scaleY(0.99); }
 
 .logo {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
