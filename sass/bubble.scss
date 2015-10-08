@@ -1,0 +1,142 @@
+@import "style";
+
+#logoSvg path {
+  transition: stroke-width 1s linear;
+  -webkit-transition: stroke-width 1s linear;
+  stroke-width: 0.5px;
+  // fill: #fafafa;
+  fill-opacity: 0;
+  fill-rule: evenodd;
+  overflow: visible;
+
+}
+
+#logo{
+  margin: auto;
+  -webkit-transform: matrix(1.108,0,0,1.1,68,62);
+  transform: matrix(1.108,0,0,1.1,68,62);
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+ }
+
+.button{
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  transition: padding 0.5s linear;
+  -webkit-transition: padding 0.5s linear;
+  @include box;
+
+}
+
+.button a{
+  @include typo( $fontBitter , #fafafa);
+
+}
+
+.button:hover{
+  padding: 20px;
+  background: rgba(202,202,202,0.8);
+}
+
+@mixin keyframes($animationName){
+  @-webkit-keyframes $animationName{
+      @content;
+    }
+  @-moz-keyframes $animationName{
+    @content;
+  }
+  @-o-keyframes $animationName {
+    @content;
+  }
+  @keyframes $animationName{
+    @content;
+  }
+}
+
+@include keyframes(opacity){
+  0%   {
+    opacity: 0;}
+  20% {
+    opacity: 1;}
+  100% {
+    opacity: 0;}
+}
+
+@include keyframes(draw){
+  100% {stroke-dashoffset: 0 ;}
+}
+
+@include keyframes(stroke){
+  100% {stroke: #000 ;}
+}
+
+@include keyframes(transparence){
+  0% {opacity: 1 ;}
+  100% {opacity: 0 ;}
+}
+
+@include keyframes(size){
+  100% {transform: scale(1);}
+}
+
+@include keyframes(reset){
+  to{ transform: matrix(1,0,0,1,0,0)}
+}
+
+@include keyframes(close){
+  to{ transform: translate(-65%,70%) scale(0)}
+}
+
+@include keyframes(rotation){
+    25%{transform: rotate(12deg)}
+    50%{transform: rotate(-7deg)}
+    75%{transform: rotate(7deg)}
+    90%{transform: rotate(-5deg)}
+    100%{transform: rotate(0deg)}
+}
+@include keyframes(jump){
+  25%{transform: translate(0,-10%)}
+  50%{transform: translate(0,0)}
+  75%{transform: translate(0,-5%)}
+  100%{transform: translate(0,0)}
+}
+@include keyframes(show_left){
+  25%{transform: translate(-100%,0)}
+  50%{transform: translate(10%,0)}
+  75%{transform: translate(5%,0)}
+  80%{transform: translate(0%,0)}
+  85%{transform: translate(3%,0)}
+  90%{transform: translate(0%,0)}
+  85%{transform: translate(1%,0)}
+  100%{transform: translate(0%,0)}
+}
+// @include keyframes(show_down){
+//   25%{transform: translate(0%,-100%)}
+//   50%{transform: translate(0%,10%)}
+//   75%{transform: translate(0%,5%)}
+//   80%{transform: translate(0%,0%)}
+//   85%{transform: translate(0%,3%)}
+//   90%{transform: translate(0%,0%)}
+//   85%{transform: translate(0%,1%)}
+//   100%{transform: translate(0%,0%)}
+// }
+@include keyframes(ring){
+  25%{transform: translate(0%,-10%) rotate(5deg)}
+  35%{transform: translate(0%,-10%) rotate(-5deg)}
+  45%{transform: translate(0%,-10%) rotate(5deg)}
+  55%{transform: translate(0%,-10%) rotate(-5deg)}
+  65%{transform: translate(0%,-10%) rotate(5deg)}
+  75%{transform: translate(0%,-10%) rotate(0deg)}
+  100%{transform: translate(0%,0%) rotate(0)}
+}

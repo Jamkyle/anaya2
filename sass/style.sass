@@ -1,0 +1,76 @@
+@import "_vars"
+@import "_reset"
+
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+
+.font-Openss
+  font: $fontOpenSs
+.font-RobotSb
+  font: $fontRobotSb
+.font-Bitter
+  font: $fontBitter
+.font-Comforta
+  font: $fontComforta
+.font-Poiretone
+  font: $fontPoiretone
+
+=box
+  box-shadow: 0px 0px 6px #fff
+  background-clip: padding-box
+
+=colorbk($color)
+  padding: 6px 6px
+  background-color: $color
+  border-radius: 6px
+
+=typo($family, $color)
+  font-family: $family
+  text-decoration: none
+  color: $color
+
+=gradient
+  background: -moz-radial-gradient(center, circle cover,  rgba(2,2,2,0) 0%, rgba(2,2,2,0) 41%, rgba(2,2,2,0.8) 100%)
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(2,2,2,0.1)), color-stop(41%,rgba(2,2,2,0.4)), color-stop(100%,rgba(2,2,2,0.8)))
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(2,2,2,0.16) 0%,rgba(2,2,2,0.47) 41%,rgba(2,2,2,1) 100%)
+  background: -o-radial-gradient(center, ellipse cover,  rgba(2,2,2,0.1) 0%,rgba(2,2,2,0.47) 41%,rgba(2,2,2,0.8) 100%)
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(2,2,2,0.1) 0%,rgba(2,2,2,0.47) 41%,rgba(2,2,2,0.8) 100%)
+  background: radial-gradient(circle at center,  rgba(2,2,2,0.1) 10%,rgba(2,2,2,0.47) 50%,rgba(2,2,2,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b020202', endColorstr='#ad020202',GradientType=1 )
+
+// =gradient($c1, $c2, $c3)
+//   background: -moz-radial-gradient(center, circle cover,  $c1 0%, $c2 41%, $c3 100%)
+//   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$c1), color-stop(41%,$c2), color-stop(100%,$c3))
+//   background: -webkit-radial-gradient(center, ellipse cover,  $c1 0%,$c2 41%,$c3 100%)
+//   background: -o-radial-gradient(center, ellipse cover,  $c1 0%,$c2 41%,$c3 100%)
+//   background: -ms-radial-gradient(center, ellipse cover,  $c1 0%,$c2 41%,$c3 100%)
+//   background: radial-gradient(circle at center,  $c1 1%,$c2 41%,$c3 100%)
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ad020202',GradientType=1 )
+
+=transform ($command)
+  -webkit-transform : #{$command}
+  transform : #{$command}
+
+body
+  background: #02001a
+
+#back
+  position: fixed
+  width: 100%
+  height: 100%
+  background: url('../src/anaya_backg.png') no-repeat bottom
+  background-size: 100%
+  opacity: 0.2
+  z-index: -999
+
+.mask
+  position: absolute
+  width: 100%
+  height: 100%
+  // +gradient
+  background: #fff
+  opacity: 0.4
+  z-index: -99
