@@ -5,30 +5,31 @@ var gLogo = document.getElementById('gLogo');
   function drawlogo(anElem){ // dessine un element du logo
     var style = anElem.style;
     style.animation= "draw 0.4s linear forwards"; //start stroke
-    if(navigator.userAgent.indexOf("Chrome") != -1 )
-    if (anElem.className.animVal.indexOf('blurme')>-1) {
-      setTimeout(function(){anElem.style.filter = 'url(#f2)';}, 300) //blur elements
-    }
+    // if(navigator.userAgent.indexOf("Chrome") != -1 )
+      // if (anElem.className.animVal.indexOf('blurme')>-1) {
+        // setTimeout(function(){anElem.style.filter = 'url(#f2)';}, 300) //blur elements
+      // }
   }
 
   function fillIt(anElem, i){ //colorie le logo
     //Decomment si image
     document.getElementById('logo').style.animation = 'transparence 1s linear 1 forwards reverse';
-    // if (anElem!=null) {
-    //   if(anElem.className.animVal.indexOf('fillme')>-1){
-    //     anElem.style.transition = 'fill-opacity 3s linear';
-    //     anElem.style.fillOpacity= "1";
-    //   }
-    // }
-    // if(i<elems.length){
-    // i++;
-    // fillIt(elems[i], i);
-    // }else {
-    // i=0;
+    if (anElem!=null) {
+      if(anElem.className.animVal.indexOf('fillme')>-1){
+        // anElem.style.transition = 'fill-opacity 3s linear';
+        // anElem.style.fillOpacity= "0.5";
+        // anElem.style.fill= "#101010";
+      }
+    }
+    if(i<elems.length){
+    i++;
+    fillIt(elems[i], i);
+    }else {
+    i=0;
     // console.log('run');
-    setTimeout(function(){logoSvg.style.animation='size 1s linear forwards' }, 1500);
+    // setTimeout(function(){logoSvg.style.animation='size 1s linear forwards' }, 1500);
     setTimeout(function(){removeStroke(elems[i],i)}, 1000) //wait 3s before remove stroke
-    // }
+    }
   }
 
   function fill(){
@@ -38,8 +39,8 @@ var gLogo = document.getElementById('gLogo');
   function removeStroke(elem,i){
     if(elem!=null){
     // elem.style.transition = 'stroke 1.5s linear';
+    elem.style.strokeWidth = '0.1px';
     // elem.style.stroke = '#101010';
-    elem.style.strokeWidth = '0px';
   }if(i<elems.length){
     i++;
     removeStroke(elems[i], i);}
