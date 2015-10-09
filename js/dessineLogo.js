@@ -16,9 +16,9 @@ var gLogo = document.getElementById('gLogo');
     if(navigator.userAgent.indexOf("Chrome") != -1 )
       document.getElementById('logo').style.animation = 'transparence 1s linear 1 forwards reverse';
     if (anElem!=null) {
-      if(anElem.className.animVal.indexOf('fillme')>-1 && navigator.userAgent.indexOf("Chrome") == -1){
+      if(anElem.className.animVal.indexOf('fillme')>-1){
         anElem.style.transition = 'fill-opacity 3s linear';
-        anElem.style.fillOpacity= "0.7";
+        anElem.style.fillOpacity= "0.6";
         anElem.style.fill= "#101010";
       }
     }
