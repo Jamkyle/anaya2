@@ -13,12 +13,13 @@ var gLogo = document.getElementById('gLogo');
 
   function fillIt(anElem, i){ //colorie le logo
     //Decomment si image
-    document.getElementById('logo').style.animation = 'transparence 1s linear 1 forwards reverse';
+    if(navigator.userAgent.indexOf("Chrome") != -1 )
+      document.getElementById('logo').style.animation = 'transparence 1s linear 1 forwards reverse';
     if (anElem!=null) {
-      if(anElem.className.animVal.indexOf('fillme')>-1){
-        // anElem.style.transition = 'fill-opacity 3s linear';
-        // anElem.style.fillOpacity= "0.5";
-        // anElem.style.fill= "#101010";
+      if(anElem.className.animVal.indexOf('fillme')>-1 && navigator.userAgent.indexOf("Chrome") == -1){
+        anElem.style.transition = 'fill-opacity 3s linear';
+        anElem.style.fillOpacity= "0.7";
+        anElem.style.fill= "#101010";
       }
     }
     if(i<elems.length){
@@ -28,7 +29,9 @@ var gLogo = document.getElementById('gLogo');
     i=0;
     // console.log('run');
     // setTimeout(function(){logoSvg.style.animation='size 1s linear forwards' }, 1500);
-    setTimeout(function(){removeStroke(elems[i],i)}, 1000) //wait 3s before remove stroke
+    if(navigator.userAgent.indexOf("Chrome") != -1 )
+      setTimeout(function(){removeStroke(elems[i],i)}, 10) //wait 3s before remove stroke
+    else setTimeout(function(){removeStroke(elems[i],i)}, 1000) //wait 3s before remove stroke
     }
   }
 
