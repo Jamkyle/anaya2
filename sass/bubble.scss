@@ -45,7 +45,7 @@
 
 }
 
-.button a{
+a.button{
   @include typo( $fontBitter , #fafafa);
 
 }
@@ -53,6 +53,25 @@
 .button:hover{
   padding: 20px;
   background: rgba(202,202,202,0.8);
+}
+
+.pages{
+  width: 100%;
+  height: 100%;
+}
+
+#section-accueil{
+  background: #fbfbfb
+}
+
+#section-event{
+  background: #ebebeb
+}
+#section-media{
+  background: #dbdbdb
+}
+#section-about{
+  background: #cbcbcb
 }
 
 @mixin keyframes($animationName){
