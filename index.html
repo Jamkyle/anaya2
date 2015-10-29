@@ -9,16 +9,30 @@
     <link href='http://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" src='js/snap.svg-min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src='js/jquery.waypoints.min.js'></script>
   </head>
   <body>
-    <div class='mask'></div>
 
+    <div class='mask'></div>
     <div id='main'>
       <div id="back">
       </div>
+      <div id="menu_sticky" class="standard">
+        <div id="shrink_bg" style='display:none'></div>
+        <a href="#"><img style='cursor: pointer' id='logo_menu' src="src/anayasolo.png" width='70px' alt="logo top left" /></a>
+        <ul class='menu'>
+          <li><a class="menu_button target-about" href="#about">A PROPOS</a></li>
+          <li><a class="menu_button target-media" href="#media">MEDIAS</a></li>
+          <li><a class="menu_button target-event" href="#event">EVENEMENTS</a></li>
+          <li><a class="menu_button target-contact" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
       <section id='first_page' class='pages'>
+
         <div class="clipping" id='logo'></div>
-        <div class="logo" style='stroke:#eaeaea'>
+
+        <div class="logo" style='stroke:#555555'>
           <svg version="1.1" id="logoSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          viewBox="0 0 552 650" style="enable-background:new 0 0 552 650; margin: auto; transform:translate(0.5%,3%)" xml:space="default">
          <!-- <img  id='logo' src="src/anaya-logo2.png" style='position: absolute;opacity:0;' alt="logo" /> -->
@@ -115,23 +129,37 @@
             C270.4,462.5,258.1,475.1,258.1,490.4z
             M408.4,490.2c-0.1,15.3,12.2,27.4,27.7,27.5c15.3,0,27.1-11.8,27.2-27.2c0.1-15.6-11.7-27.6-27.2-27.8
             C420.9,462.4,408.4,474.8,408.4,490.2z
-            " stroke-dasharray="500" stroke-dashoffset="500"/>
 
-            <path id="n" class='fillme blurme' style=";stroke-linecap:round;stroke-linejoin:round;" d="
             M150.2,524.3c0,7.1,3.4,11.1,8.8,11c5.9-0.2,8.9-3.7,8.9-10.8c0.1-12.2-0.1-24.3,0.2-36.5c0.3-10.6,5.8-18.5,15.3-22.8
             c9.3-4.3,18.6-3,26.9,3.2c8.1,6.1,10.1,14.9,10.3,24.4c0.2,11.3,0,22.7,0.1,34c0.1,5.1,3.6,8.5,8.5,8.5c5.2,0.1,8.8-3.4,8.8-8.6
             c0.1-9.7,0.1-19.3,0-29c0-5.5,0.5-11.1-0.6-16.4c-5.9-31.2-41.8-46.9-69.1-28.5c-2.6-5.7-6.7-8.4-11.1-7.6
-            c-4.4,0.8-6.8,4.6-7.1,10.7c0,0.3,0,0.7,0,1C150.2,479.3,150.2,501.8,150.2,524.3z" stroke-dasharray="800" stroke-dashoffset="800"/>
+            c-4.4,0.8-6.8,4.6-7.1,10.7c0,0.3,0,0.7,0,1C150.2,479.3,150.2,501.8,150.2,524.3z
+
+            M349.4,518.2c0.9,2.3,0.9,5.5,0,7.9c-3.1,8.8-6.8,17.3-10.2,26c-1.6,4-1.1,7.5,2.8,10.1c5,3.2,9.9,1.8,12.5-4.1
+            c7.3-16.9,14.4-34,21.5-51c6.8-16.4,13.5-32.9,20.2-49.4c2.2-5.4,0.6-9-4.2-11c-5-2-8.8-0.2-11.6,6.1
+            c-6.6,15.2-13,30.6-19.9,46.7c-2-4.7-3.7-8.6-5.3-12.6c-4.8-11.5-9.4-23.1-14.6-34.5c-2.6-5.8-7.2-7.6-11.6-5.6
+            c-4.5,2-5.8,6.9-3.4,12.7C333.5,479.1,341.6,498.6,349.4,518.2z
+            " stroke-dasharray="1000" stroke-dashoffset="1000"/>
+
+            <path id="n" class='blurme' style=";stroke-linecap:round;stroke-linejoin:round;" d="
+            M150.2,524.3c0,7.1,3.4,11.1,8.8,11c5.9-0.2,8.9-3.7,8.9-10.8c0.1-12.2-0.1-24.3,0.2-36.5c0.3-10.6,5.8-18.5,15.3-22.8
+            c9.3-4.3,18.6-3,26.9,3.2c8.1,6.1,10.1,14.9,10.3,24.4c0.2,11.3,0,22.7,0.1,34c0.1,5.1,3.6,8.5,8.5,8.5c5.2,0.1,8.8-3.4,8.8-8.6
+            c0.1-9.7,0.1-19.3,0-29c0-5.5,0.5-11.1-0.6-16.4c-5.9-31.2-41.8-46.9-69.1-28.5c-2.6-5.7-6.7-8.4-11.1-7.6
+            c-4.4,0.8-6.8,4.6-7.1,10.7c0,0.3,0,0.7,0,1C150.2,479.3,150.2,501.8,150.2,524.3z
+
+            " stroke-dasharray="800" stroke-dashoffset="800"/>
 
             <path id="a2"  style=";stroke-linecap:round;stroke-linejoin:round;" d="
             M248.6,516.2c16.6,22.9,47,23.8,63.9,11.1c0.3,0.4,0.5,0.8,0.7,1.2c2.9,5.7,6,7.6,10.9,6.4c4.9-1.2,6.8-4,6.8-10.6
             c0-11.3,0.3-22.7,0-34c-0.5-19.1-9.4-33.3-26.5-41.3c-16.5-7.7-32.5-5.3-46.9,6C238.5,470.1,234.9,497.3,248.6,516.2z " stroke-dasharray="800" stroke-dashoffset="800"/>
 
-            <path id="y" class='fillme blurme' style=";stroke-linecap:round;stroke-linejoin:round;" d="
+            <path id="y" class='blurme' style=";stroke-linecap:round;stroke-linejoin:round;" d="
             M349.4,518.2c0.9,2.3,0.9,5.5,0,7.9c-3.1,8.8-6.8,17.3-10.2,26c-1.6,4-1.1,7.5,2.8,10.1c5,3.2,9.9,1.8,12.5-4.1
             c7.3-16.9,14.4-34,21.5-51c6.8-16.4,13.5-32.9,20.2-49.4c2.2-5.4,0.6-9-4.2-11c-5-2-8.8-0.2-11.6,6.1
             c-6.6,15.2-13,30.6-19.9,46.7c-2-4.7-3.7-8.6-5.3-12.6c-4.8-11.5-9.4-23.1-14.6-34.5c-2.6-5.8-7.2-7.6-11.6-5.6
-            c-4.5,2-5.8,6.9-3.4,12.7C333.5,479.1,341.6,498.6,349.4,518.2z" stroke-dasharray="800" stroke-dashoffset="800"/>
+            c-4.5,2-5.8,6.9-3.4,12.7C333.5,479.1,341.6,498.6,349.4,518.2z
+
+            " stroke-dasharray="1200" stroke-dashoffset="1200"/>
 
             <path id="a3"  style=";stroke-linecap:round;stroke-linejoin:round;" d="
             M409.5,527c13.6,10.8,39.1,11.4,53.1,0.3c0.4,0.8,0.7,1.2,0.9,1.6c2.8,5.3,6,7.1,10.7,6c5-1.2,6.9-3.8,6.9-10
@@ -147,14 +175,213 @@
               </filter>
             </defs>
           </svg>
-            <a class="button" href="#section-accueil">Entrer</a>
+          <audio class='player'style='position: absolute' autoplay loop controls muted>
+            <source src="src/marichesse.mp3" type="audio/mp3">
+          </audio>
+
+            <!-- <a class="button" href="#section-accueil">Entrer</a> -->
+        </div>
+
+      </section>
+      <!-- <section id='accueil' class='pages'>
+
+      </section> -->
+      <section id='about' class='pages'>
+        <div class="bg"><img src="https://scontent-mrs1-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/54104_167895016577384_6985103_o.jpg" width='62%' height='100%' style='float:right'alt="" /></div>
+        <div class="top">
+        </div>
+        <div class="container">
+          <p class='font-Josefin' style='margin-left: 50px;'>
+            Anaya, association régie par la loi de 1901, oeuvre à l'organisation d'évènements, au soutien d'actions de solidarité et de projets inspirés par les valeurs de l'Evangile.<br/>
+            Présidé par Eliandry RAHARIJAONARIVELO, le bureau de l'association est composé de neufs membres administrateurs.
+          </p>
+          <p class='font-Josefin' style='margin-left: 100px; margin-top: 50px'>
+            Eliandry RAHARIJAONARIVELO: Président <br/>
+            Anne-Sophie RAHARIJAONARIVELO: Président Adjoint <br/>
+            Sandra RABETRANO: Secrétaire <br/>
+            Lova SOLOFOARIJAONA: Secrétaire Adjointe <br/>
+            Mirana RAJAOFERA: Comptable <br/>
+            Samuel R: Comptable Adjoint <br/>
+            Ketaka RASAMOELY: Chargée de communication <br/>
+            Ernest RANDRIAMBOLOLONA: Responsable Activité FootBall <br/>
+            Stephane ANDRIA: Membre d'honneur
+          </p>
+          <p class='font-Josefin' style='margin-left: 50px; margin-top: 50px'>
+            Anaya association agit au travers de la Chorale mais aussi au travers de son équipe de FootBall.
+          </p>
         </div>
       </section>
+      <section id='media' class='pages'>
+        <div class="bg"><img src="src/anaya.jpg" width='100%' height='100%' alt="" /></div>
+        <p>
+          Section medias
+        </p>
+      </section>
+      <section id='event' class='pages'>
+        <div class="bg"><img src="src/anaya.jpg" width='100%' height='100%' alt="" /></div>
 
-    <footer class='foot_container'></footer>
+        <p>
+          Section events
+        </p>
+      </section>
+      <section id='contact' class='pages'>
+        <div class="lien">
+          <a href="https://www.facebook.com/anayaassociation/?fref=ts" target='_blank'><i class="fa fa-facebook fa-3x fb icon"></i></a>
+          <a href="https://twitter.com/Anaya_assoc" target='_blank'><i class="fa fa-twitter fa-3x tw icon"></i></a>
+        </div>
+        <div class="contact_inner">
+          <h3>Anaya Association</h3>
+          <div class="bloc_addr">
+            <!-- <i class='fa fa-building-o' style='display:inline; height:100px; float:left; padding: 10px 20px 10px 5px'></i> -->
+
+                <p>
+                  103, Avenue Paul-Vaillant-Couturier<br/>
+                  Vitry-Sur-Seine 94400
+                </p>
+          </div>
+          <div class="bloc_num">
+            <!-- <i class='fa fa-envelope' style='display:inline; height:100px; float:left; padding: 10px 20px 10px 5px'></i> -->
+                <p>
+                  <ul>
+                    <li>+33(0) 0 00 00 00 00</li>
+                    <li>contact@anaya-association.org</li>
+                  </ul>
+                </p>
+          </div>
+        </div>
+        <div class="copy">
+          <span>copyright © anaya-association</span>
+        </div>
+
+      </section>
+
+
     </div>
-    <footer class='foot_bg'></footer>
+    <footer class='foot_bg foot_container'></footer>
     <script type="text/javascript" src='js/dessineLogo.js'> //logo
+    </script>
+    <script type="text/javascript">
+    var contact = document.getElementsByClassName('target-contact');
+    contact[0].style.color ="#101010";
+    $('#about').waypoint(function(direction){
+      if(direction==='down'){
+
+        var bg = document.getElementById('shrink_bg');
+        var logosh = document.getElementById('logo_menu');
+        var menu = document.getElementsByClassName('menu');
+        var contact = document.getElementsByClassName('target-contact');
+        contact[0].style.color ="#fff";
+          $('#menu_sticky').removeClass('standard');
+          $('#menu_sticky').addClass('shrink');
+          logosh.style.opacity ="1";
+          logosh.style.display ="block";
+          bg.style.display='block';
+          menu[0].style.marginTop='47px';
+          menu[0].style.transition='margin 0.2s linear';
+
+        }
+      if(direction==='up'){
+        $('.menu li a').removeClass('current');
+        var elem = document.getElementById('menu_sticky');
+        var bg = document.getElementById('shrink_bg');
+        var logosh = document.getElementById('logo_menu');
+        var menu = document.getElementsByClassName('menu');
+        var contact = document.getElementsByClassName('target-contact');
+        contact[0].style.color ="#101010";
+        $('#menu_sticky').removeClass('shrink');
+        $('#menu_sticky').addClass('standard');
+          bg.style.display='none';
+          logosh.style.opacity ="0";
+          menu[0].style.marginTop='40px';
+      }
+    },{
+      offset : 84
+    }
+  );
+  $('section').waypoint(function(direction){
+    if(direction==='down')
+          change(this.element.id);
+      },{offset : 'bottom-in-view'
+  }
+);
+  $('section').waypoint(function(direction){
+    if(direction==='up')
+          change(this.element.id);
+      },{offset : '-1%'
+  });
+
+  function change($section){
+    $('.menu li a').removeClass('current');
+    currentSection = $section;
+    $('.target-'+$section).addClass('current');
+}
+
+// Smooth scroll for in page links - http://wibblystuff.blogspot.in/2014/04/in-page-smooth-scroll-using-css3.html
+// Improvements from - http://codepen.io/kayhadrin/pen/KbalA
+
+$(function() {
+	var $window = $(window), $document = $(document),
+		transitionSupported = typeof document.body.style.transitionProperty === "string", // detect CSS transition support
+		scrollTime = 0.7; // scroll time in seconds
+
+	$(document).on("click", "a[href*=#]:not([href=#])", function(e) {
+		var target, avail, scroll, deltaScroll;
+
+		if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+			target = $(this.hash);
+			target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+			if (target.length) {
+				avail = $document.height() - $window.height();
+
+				if (avail > 0) {
+					scroll = target.offset().top;
+
+					if (scroll > avail) {
+						scroll = avail;
+					}
+				} else {
+					scroll = 0;
+				}
+
+				deltaScroll = $window.scrollTop() - scroll;
+
+				// if we don't have to scroll because we're already at the right scrolling level,
+				if (!deltaScroll) {
+					return; // do nothing
+				}
+
+				e.preventDefault();
+
+				if (transitionSupported) {
+					$("html").css({
+						"margin-top": deltaScroll + "px",
+						"transition": scrollTime + "s ease-in-out"
+					}).data("transitioning", scroll);
+				} else {
+					$("html, body").stop(true, true) // stop potential other jQuery animation (assuming we're the only one doing it)
+					.animate({
+						scrollTop: scroll + "px"
+					}, scrollTime * 1000);
+
+					return;
+				}
+			}
+		}
+	});
+
+	if (transitionSupported) {
+		$("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function(e) {
+			var $this = $(this),
+				scroll = $this.data("transitioning");
+
+			if (e.target === e.currentTarget && scroll) {
+				$this.removeAttr("style").removeData("transitioning");
+				$("html, body").scrollTop(scroll);
+			}
+		});
+	}
+});
     </script>
   </body>
 </html>

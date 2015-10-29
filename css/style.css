@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab|Bitter|Comfortaa|Poiret+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab|Bitter|Comfortaa|Poiret+One|Montserrat|Josefin+Sans);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -83,6 +83,12 @@ html, body {
 .font-Poiretone {
   font: "Poiret One", cursive; }
 
+.font-Josefin {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  text-align: left;
+  color: #5E2D07; }
+
 body {
   background: #020010; }
 
@@ -116,7 +122,7 @@ body {
   width: 100%;
   height: 100%;
   background: #fff;
-  opacity: 0.4;
+  opacity: 0.50;
   z-index: -99; }
 
 #main {

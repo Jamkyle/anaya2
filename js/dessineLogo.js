@@ -18,8 +18,8 @@ var gLogo = document.getElementById('gLogo');
     if (anElem!=null) {
       if(anElem.className.animVal.indexOf('fillme')>-1){
         anElem.style.transition = 'fill-opacity 3s linear';
-        anElem.style.fillOpacity= "0.6";
-        anElem.style.fill= "#101010";
+        anElem.style.fillOpacity= "0.4";
+        anElem.style.fill= "#101011";
       }
     }
     if(i<elems.length){
