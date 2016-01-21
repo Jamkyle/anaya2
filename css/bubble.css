@@ -326,7 +326,7 @@ p {
 .container {
   position: relative; }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes opacity {
   0% {
     opacity: 0; }
   20% {
@@ -334,7 +334,7 @@ p {
   100% {
     opacity: 0; } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes opacity {
   0% {
     opacity: 0; }
   20% {
@@ -342,7 +342,7 @@ p {
   100% {
     opacity: 0; } }
 
-@-o-keyframes $animationName {
+@-o-keyframes opacity {
   0% {
     opacity: 0; }
   20% {
@@ -350,7 +350,7 @@ p {
   100% {
     opacity: 0; } }
 
-@keyframes $animationName {
+@keyframes opacity {
   0% {
     opacity: 0; }
   20% {
@@ -358,111 +358,111 @@ p {
   100% {
     opacity: 0; } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes draw {
   100% {
     stroke-dashoffset: 0; } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes draw {
   100% {
     stroke-dashoffset: 0; } }
 
-@-o-keyframes $animationName {
+@-o-keyframes draw {
   100% {
     stroke-dashoffset: 0; } }
 
-@keyframes $animationName {
+@keyframes draw {
   100% {
     stroke-dashoffset: 0; } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes stroke {
   100% {
     stroke: #000; } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes stroke {
   100% {
     stroke: #000; } }
 
-@-o-keyframes $animationName {
+@-o-keyframes stroke {
   100% {
     stroke: #000; } }
 
-@keyframes $animationName {
+@keyframes stroke {
   100% {
     stroke: #000; } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes transparence {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes transparence {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 
-@-o-keyframes $animationName {
+@-o-keyframes transparence {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 
-@keyframes $animationName {
+@keyframes transparence {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes size {
   100% {
     transform: scale(1); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes size {
   100% {
     transform: scale(1); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes size {
   100% {
     transform: scale(1); } }
 
-@keyframes $animationName {
+@keyframes size {
   100% {
     transform: scale(1); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes reset {
   to {
     transform: matrix(1, 0, 0, 1, 0, 0); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes reset {
   to {
     transform: matrix(1, 0, 0, 1, 0, 0); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes reset {
   to {
     transform: matrix(1, 0, 0, 1, 0, 0); } }
 
-@keyframes $animationName {
+@keyframes reset {
   to {
     transform: matrix(1, 0, 0, 1, 0, 0); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes close {
   to {
     transform: translate(-65%, 70%) scale(0); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes close {
   to {
     transform: translate(-65%, 70%) scale(0); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes close {
   to {
     transform: translate(-65%, 70%) scale(0); } }
 
-@keyframes $animationName {
+@keyframes close {
   to {
     transform: translate(-65%, 70%) scale(0); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes rotation {
   25% {
     transform: rotate(12deg); }
   50% {
@@ -474,7 +474,7 @@ p {
   100% {
     transform: rotate(0deg); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes rotation {
   25% {
     transform: rotate(12deg); }
   50% {
@@ -486,7 +486,7 @@ p {
   100% {
     transform: rotate(0deg); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes rotation {
   25% {
     transform: rotate(12deg); }
   50% {
@@ -498,7 +498,7 @@ p {
   100% {
     transform: rotate(0deg); } }
 
-@keyframes $animationName {
+@keyframes rotation {
   25% {
     transform: rotate(12deg); }
   50% {
@@ -510,7 +510,7 @@ p {
   100% {
     transform: rotate(0deg); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes jump {
   25% {
     transform: translate(0, -10%); }
   50% {
@@ -520,7 +520,7 @@ p {
   100% {
     transform: translate(0, 0); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes jump {
   25% {
     transform: translate(0, -10%); }
   50% {
@@ -530,7 +530,7 @@ p {
   100% {
     transform: translate(0, 0); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes jump {
   25% {
     transform: translate(0, -10%); }
   50% {
@@ -540,7 +540,7 @@ p {
   100% {
     transform: translate(0, 0); } }
 
-@keyframes $animationName {
+@keyframes jump {
   25% {
     transform: translate(0, -10%); }
   50% {
@@ -550,7 +550,7 @@ p {
   100% {
     transform: translate(0, 0); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes show_left {
   25% {
     transform: translate(-100%, 0); }
   50% {
@@ -568,7 +568,7 @@ p {
   100% {
     transform: translate(0%, 0); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes show_left {
   25% {
     transform: translate(-100%, 0); }
   50% {
@@ -586,7 +586,7 @@ p {
   100% {
     transform: translate(0%, 0); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes show_left {
   25% {
     transform: translate(-100%, 0); }
   50% {
@@ -604,7 +604,7 @@ p {
   100% {
     transform: translate(0%, 0); } }
 
-@keyframes $animationName {
+@keyframes show_left {
   25% {
     transform: translate(-100%, 0); }
   50% {
@@ -622,7 +622,7 @@ p {
   100% {
     transform: translate(0%, 0); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes ring {
   25% {
     transform: translate(0%, -10%) rotate(5deg); }
   35% {
@@ -638,7 +638,7 @@ p {
   100% {
     transform: translate(0%, 0%) rotate(0); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes ring {
   25% {
     transform: translate(0%, -10%) rotate(5deg); }
   35% {
@@ -654,7 +654,7 @@ p {
   100% {
     transform: translate(0%, 0%) rotate(0); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes ring {
   25% {
     transform: translate(0%, -10%) rotate(5deg); }
   35% {
@@ -670,7 +670,7 @@ p {
   100% {
     transform: translate(0%, 0%) rotate(0); } }
 
-@keyframes $animationName {
+@keyframes ring {
   25% {
     transform: translate(0%, -10%) rotate(5deg); }
   35% {
@@ -686,25 +686,25 @@ p {
   100% {
     transform: translate(0%, 0%) rotate(0); } }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes margin {
   0% {
     transform: translateY(-5px); }
   100% {
     transform: translateY(0px); } }
 
-@-moz-keyframes $animationName {
+@-moz-keyframes margin {
   0% {
     transform: translateY(-5px); }
   100% {
     transform: translateY(0px); } }
 
-@-o-keyframes $animationName {
+@-o-keyframes margin {
   0% {
     transform: translateY(-5px); }
   100% {
     transform: translateY(0px); } }
 
-@keyframes $animationName {
+@keyframes margin {
   0% {
     transform: translateY(-5px); }
   100% {

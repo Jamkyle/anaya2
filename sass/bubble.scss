@@ -123,13 +123,13 @@ a.button{
 
 }
 
-@media (min-width: 768)
+@media (min-width: 768){
+  .font
   {
-    .font
-    {
-      font-size: 1em;
-    }
+    font-size: 1em;
   }
+}
+
 #contact{
   height: 0;
 }
@@ -251,22 +251,23 @@ p{
   position: relative;
 }
 
+
 @mixin keyframes($animationName){
-  @-webkit-keyframes $animationName{
+  @-webkit-keyframes #{$animationName}{
       @content;
-    }
-  @-moz-keyframes $animationName{
+  }
+  @-moz-keyframes #{$animationName}{
     @content;
   }
-  @-o-keyframes $animationName {
+  @-o-keyframes #{$animationName} {
     @content;
   }
-  @keyframes $animationName{
+  @keyframes #{$animationName}{
     @content;
   }
 }
 
-@include keyframes(opacity){
+@include keyframes(opacity) {
   0%   {
     opacity: 0;}
   20% {
@@ -275,20 +276,20 @@ p{
     opacity: 0;}
 }
 
-@include keyframes(draw){
-  100% {stroke-dashoffset: 0 ;}
+@include keyframes(draw) {
+  100% {stroke-dashoffset: 0 }
 }
 
-@include keyframes(stroke){
+@include keyframes(stroke) {
   100% {stroke: #000 ;}
 }
 
-@include keyframes(transparence){
+@include keyframes(transparence) {
   0% {opacity: 1 ;}
   100% {opacity: 0 ;}
 }
 
-@include keyframes(size){
+@include keyframes(size) {
   100% {transform: scale(1);}
 }
 
@@ -300,20 +301,20 @@ p{
   to{ transform: translate(-65%,70%) scale(0)}
 }
 
-@include keyframes(rotation){
+@include keyframes(rotation) {
     25%{transform: rotate(12deg)}
     50%{transform: rotate(-7deg)}
     75%{transform: rotate(7deg)}
     90%{transform: rotate(-5deg)}
     100%{transform: rotate(0deg)}
 }
-@include keyframes(jump){
+@include keyframes(jump) {
   25%{transform: translate(0,-10%)}
   50%{transform: translate(0,0)}
   75%{transform: translate(0,-5%)}
   100%{transform: translate(0,0)}
 }
-@include keyframes(show_left){
+@include keyframes(show_left) {
   25%{transform: translate(-100%,0)}
   50%{transform: translate(10%,0)}
   75%{transform: translate(5%,0)}
@@ -333,7 +334,7 @@ p{
 //   85%{transform: translate(0%,1%)}
 //   100%{transform: translate(0%,0%)}
 // }
-@include keyframes(ring){
+@include keyframes(ring) {
   25%{transform: translate(0%,-10%) rotate(5deg)}
   35%{transform: translate(0%,-10%) rotate(-5deg)}
   45%{transform: translate(0%,-10%) rotate(5deg)}
@@ -343,7 +344,7 @@ p{
   100%{transform: translate(0%,0%) rotate(0)}
 }
 
-@include keyframes(margin){
+@include keyframes(margin) {
   0%{
   transform: translateY(-5px);
   }
