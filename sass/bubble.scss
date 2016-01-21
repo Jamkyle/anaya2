@@ -123,6 +123,13 @@ a.button{
 
 }
 
+@media (min-width: 768)
+  {
+    .font
+    {
+      font-size: 1em;
+    }
+  }
 #contact{
   height: 0;
 }
@@ -243,7 +250,6 @@ p{
 .container{
   position: relative;
 }
-
 
 @mixin keyframes($animationName){
   @-webkit-keyframes $animationName{
